@@ -1,0 +1,144 @@
+{setserver:uses|{js:let uses = {getserver:uses|0};
+console.log(uses+1);}}{setserver:milestone|{js:let uses = {getserver:uses};
+console.log((Math.floor(uses/1000)+1)*1000);}}{choose:i woke up in a new buggati|🚡|https://cdn.discordapp.com/attachments/1124758334805909509/1383156887486468109/youtube-8XjzZl5nW2I.mp4?ex=684dc4bb&is=684c733b&hm=03dc8d59b7cb1ec11e77f1fb3606fec5b7ee4114f96e3c059ba71d0c078d148f&|sprunki sprunki sprunki get funky funky funky|cuphead and his pal mugman|featuring posy|i would die for this video ngl|chicken. 💥|# ALL OUR FOOD KEEPS BLOWING U- 💥💥💥💥|⬇️ ts is so boring 🥱|goze|goose|🪿|🍳🍳🍳|erm this video is actually copyrighted 🤓☝️|copyright infringemente|sussy baka|sprunki gyatt|steamed hams|Here is your video:|have a boul mr squidward|E|<:BeeboWhar:1266172814759825630>|delta|🦤🦤🦤 |Here is your vidass:|-# Note: HollyVidass is in Beta!|hey i feel so sprunki|《SPRUNKI》|☆TAT☆ FOUND AFTER 10 YEARS NO WAY|hamburguejas al vapor {newline} -# no|la cagada va en la taza|Ladies and gentleman {newline} the moment you been waiting for the {newline} BEST SPRUNKI GYATT SONG EVER!!!!|¡Te agarré! ¡Te agarré, pedazo de p**o ¿Viste que sos un putazo come pija? Ahora sí, con esto te voy a hacer mierda. ¡De nuevo! ¡De nuevo lo tengo! ¡De nuevo lo tengo! Este plano está mucho mejor. Pero mirá cómo se le ve. Se le está parando la pija. ¡Qué flor de p**o!|{repeat:30|{mention:{user}}}|have a bowl mr squidward|hey look! it's ygl2k14!|時間が流れて無気力になって、ほら、ぐるぐる回って、私を捨てる心は見えない|chicken jockey|https://cdn.discordapp.com/attachments/1124758906376302632/1371235678175625256/convert-6.png?ex=6822663e&is=682114be&hm=ab729757f6138d0b9f6525f1b86cb6dd32cddd66f5ca6ebd75fcc8f0c74f0ebf&|https://cdn.discordapp.com/attachments/1124758334805909509/1373047425249579008/convert.png?ex=6828fd90&is=6827ac10&hm=6d02944c29c29213d2bba16cb2a2efda9ad590714575b74442486aeddf9438e1&|https://cdn.discordapp.com/attachments/1124758334805909509/1373050009364201492/hEaImIHB.png?ex=6828fff8&is=6827ae78&hm=6f906864020870468e1f59980e9ad16f7cb3563741af3b8cf23c2fc688053daa&|https://cdn.discordapp.com/attachments/1124758334805909509/1373048910335053905/caption.mp4?ex=6828fef2&is=6827ad72&hm=c5cadafc3298b3db63508f295ab0cc9ee277e9458627a963f8046930c4966e6b&|https://cdn.discordapp.com/attachments/1124758334805909509/1373269659809353748/snip.mp4?ex=6829cc89&is=68287b09&hm=b512d59e6bff04c86bfb9adbf3ca70c9cce6ed092b3490c22f7e873176681f01&}
+-# **#{getserver:uses}**
+-# {js:let uses = {getserver:uses};
+let milestone = {getserver:milestone};
+console.log(milestone-uses);} left until {getserver:milestone}{if:{arg:0}|=|download|then:{iscript:load {search.youtube:{args:1}} m
+scale m 0.5
+render m}|else:{if:{arg:0}|=|help|then:wip|else:{set:output|{py:import random
+import string
+
+arg_string = {jsonify:{args}}
+parsearr = []
+
+for arg in arg_string.split(','):
+    tempdict = []
+    if '=' in arg:
+        key, value = arg.split('=', 1)
+        tempdict.append(key)
+        tempdict.append(value)
+    else:
+        tempdict.append(arg)
+    parsearr.append(tempdict)
+def constrain(val, min_val, max_val):
+    if val == None:
+        return None
+    if type(val)     == str:
+        val     = float(val    )
+    if type(min_val) == str:
+        min_val = float(min_val)
+    if type(max_val) == str:
+        max_val = float(max_val)
+    return min(max_val, max(min_val, val))
+
+def keygen(length):
+    characters = string.ascii_letters + string.digits + string.punctuation
+    random_string = ''.join(random.choice(characters) for i in range(length))
+    return random_string
+
+def str_int(n):
+    return int(float(n))
+
+def sap_gen(pitches):
+    put = "-filter_complex '"
+    pitchlist = pitches.split("|")
+    plen = str(len(pitchlist))
+    for i, v in enumerate(pitchlist):
+        put += f"[0:a]rubberband=formant=712923000:pitch=2^({v}/12)[a{i}];"
+    for i, v in enumerate(pitchlist):
+        put += f"[a{i}]"
+    put += f"amix={plen},volume={plen},atrim=0.025[outa]' -map 0:v -map '[outa]'"
+    return put
+
+def parse(val):
+    if val[0] == "bgr":
+        print("-vf colorchannelmixer=0:0:1:0:0:1:0:0:1:0:0:0:0:0:0:1 ",end="")
+    elif val[0] == "invert":
+        print("-vf negate ",end="")
+    elif val[0] == "hflip":
+        print("-vf hflip ",end="")
+    elif val[0] == "vflip":
+        print("-vf vflip ",end="")
+    elif val[0] == "pitch" or val[0] == "pch":
+        val[1] = constrain(val[1],-79.726,79.726)
+        print(f"-af 'rubberband=pitch=2^({val[1]}/12):formant=712923000',atrim=0.025 ",end="")
+    elif val[0] == "sap":
+        valu = sap_gen(val[1])
+        print(f"{valu}",end=" ")
+    elif val[0] == "rlag":
+        val[1] = constrain(val[1],2,120)
+        print(f"-vf random={val[1]} ",end="")
+    elif val[0] == "fisheye" or val[0] == "fish":
+        print("-vf v360=input=e:output=ball,scale=$w:$h ",end="")
+    elif val[0] == "earrape" or val[0] == "er":
+        val[1] = constrain(val[1],0,100) * 10
+        print(f"-af volume={val[1]} ",end="")
+    elif val[0] == "huehsv":
+        print(f"-vf huesaturation={val[1]}:0.05:0.02:-100:100 ",end="")
+    elif val[0] == "hue":
+        print(f"-vf hue={val[1]} ",end="")
+    elif val[0] == "huecycle" or val[0] == "huec":
+        val[1] = constrain(val[1],5,50)
+        print(f"-vf 'hue=(t*360)*{val[1]}' ",end="")
+    elif val[0] == "deepfry" or val[0] == "df":
+        val[1] = constrain(val[1],0,100)
+        print("-vf hue=s="+str(val[1]/10),end=" ")
+    elif val[0] == "contrast" or val[0] == "ct":
+        val[1] = constrain(val[1],-1,100)
+        print(f"-vf eq=contrast={val[1]} ",end="")
+    elif val[0] == "vbr" or val[0] == "vbr":
+        val[1] = constrain(val[1],0,100)*72.5
+        print("-b:v "+str(7500-val[1])+" ",end="")
+    elif val[0] == "transpose":
+        val[1] = constrain(val[1],1,4)
+        print(f"-vf transpose={val[1]} ",end="")
+    elif val[0] == "fps":
+        val[1] = constrain(val[1],1,30)
+        print(f"-vf fps={val[1]} ",end="")
+    elif val[0] == "rotate":
+        print(f"-vf rotate='{val[1]}*(PI/180)' ",end="")
+    elif val[0] == "bp89cm1":
+        print(f"-vf hflip,"crop=iw/2:ih:0:0,split[left][tmp];[tmp]hflip[right];[left][right]hstack",scale=640:360,"pad=iw*1.5:ih*1.5:(ow-iw)/2.05:(oh-ih)/2:black",scale=iw/1.5:ih/1.5,scale=iw:ih*2,setsar=1:1,shear=-0.05:-0.05,v360=fisheye:fisheye:yaw=-15:roll=6.45:pitch=-10.25,shear=0.055,scale=iw*2:ih,setsar=1:1,"crop=ceil(iw/1.4):ceil(ih/1.85):285:117.5","scale=floor(iw*1.4/2):ceil(ih*1.85/2)",setsar=1:1,scale=640:360,setsar=1:1,hflip,negate,hue=132,swapuv -filter_complex "[0:a]rubberband=pitch=2^(2.5/12)[a1];[0:a]rubberband=pitch=2^(-2.5/12)[a2];[a1][a2]amix=2,volume=2,atrim=0.02[outa]" -map 0:v -map "[outa]"' ",end="")
+    elif val[0] == "gmin100":
+        print(f"-vf swapuv,hue=h=-100:s=1.5,hflip,"crop=iw/2:ih:0:0,split[left][tmp];[tmp]hflip[right];[left][right]hstack",format=yuv444p,scale=640:-1,"geq='p(X+sin(0/10+Y/30)*27,(Y+sin(0/10+X*1.8/100)*15))'",hflip,scale=iw:ih,format=yuv420p -filter_complex "[0]rubberband=pitch=2^(1/12)[00];[1]rubberband=pitch=2^(5/12)[11];[00][11]amix=2[output];[output]volume=2[outa]" -map 0:v -map "[outa]" ",end="")
+    elif val[0] == "reverse" or val[0] == "rev":
+        print(f"-vf reverse -af areverse ",end="")
+    elif val[0] == "vreverse" or val[0] == "vrev":
+        print(f"-vf reverse ",end="")
+    elif val[0] == "areverse" or val[0] == "arev":
+        print(f"-af areverse ",end="")
+    elif val[0] == "hmirror" or val[0] == "hm":
+
+        if str_int(val[1]) >= 2:
+            print("-vf hflip,'crop=iw/2:ih:0:0,split[left][tmp];[tmp]hflip[right];[left][right]hstack' ",end="")
+        else:
+            print("-vf 'crop=iw/2:ih:0:0,split[left][tmp];[tmp]hflip[right];[left][right]hstack' ",end="")
+    elif val[0] == "start":
+        print(f"-ss {val[1]} ",end="")
+    elif val[0] == "end":
+        print(f"-to {val[1]} ",end="")
+    else:
+        print("Effect does not exist. ",end="")
+
+last = 0
+
+for i, v in enumerate(parsearr):
+    if i == 0:
+        print("ffmpeg -loglevel error -i $FILE_1 ",end="")
+        parse(v)
+        print(f"{i}.ts",end="\n")
+        last = i
+    else:
+        print("ffmpeg -loglevel error -i "+str(i-1)+".ts ",end="")
+        parse(v)
+        print(f"{i}.ts",end="\n")
+        last = i
+name = keygen(5)
+print(f"ffmpeg -i {last}.ts -vf fps=30 ./output/{name}.mp4")}}{if:{indexof:Effect does not exist.|{get:output}}|!=|-1|then:{js:console.error("Effect does not exist.")}|else:{sh:load {video}
+d=$(ffprobe -i $FILE_1 -show_entries format=duration -v quiet -of csv="p=0")
+w=$(ffprobe -v error -select_streams v:0 -show_entries stream=width -of default=nw=1:nk=1 $FILE_1)
+h=$(ffprobe -v error -select_streams v:0 -show_entries stream=height -of default=nw=1:nk=1 $FILE_1)
+
+{js:console.log(`{get:output}`);}}}
+}}
